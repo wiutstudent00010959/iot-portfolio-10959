@@ -4,50 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Headband Control - User</title>
+    <!-- linking css file-->
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
   <div class="container">
     <h1>Welcome to Headband Control</h1>
-  <h1>Firebase Data Display</h1>
-  <div>
+  <h1>Data Display</h1>
+  <div> <!-- displaying all data-->
     <p><strong>Distance:</strong>
     <span id="html-distance" class="measurement"><strong>fetching value...</strong> </span> </p>
+    <canvas id="distance-graph"></canvas>
     <p><strong>Distance range is:</strong>
     <span id="html-distanceLimit" class="measurement"><strong>fetching value...</strong></span> </p>
+    <canvas id="distance-limit"></canvas>
     <p><strong>Environment:</strong>
     <span id="html-lightCondition" class="measurement"><strong>fetching value...</strong> </span> </p>
     <p><strong>Obstacle status:</strong>
     <span id="html-obstacleDetected" class="measurement"><strong>fetching value...</strong></span></p>
     <p><strong>Photoresistor value:</strong>
     <span id="html-photoresistorValue" class="measurement"><strong>fetching value...</strong> </span> </p>
+    <canvas id="resistor-graph"></canvas>
 </div>
-    <!-- User-specific content -->
-    <div id="userContent">
-      <h2>User Dashboard</h2>
-      <ul id="userList">
-        <!-- List of users will be dynamically added here -->
-      </ul>
-
-      <button id="toggleDetection">Toggle Obstacle Detection</button>
-      <button id="toggleAudioClues">Toggle Audio Clues</button>
-      <button id="toggleAudioCommands">Toggle Audio Commands</button>
-    </div>
-  </div>
 
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
 
   <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
-  
-  
+
   <script type="module">
    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js";
   
    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js";
   </script>
-  <script type="text/javascript" src="script.js"></script>
-
+  <!-- script for data visualisation using https://canvas-gauges.com-->
+<script src="https://cdn.jsdelivr.net/gh/Mikhus/canvas-gauges@gh-pages/download/2.1.7/all/gauge.min.js"></script>
+<!-- script for js-->
+<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
