@@ -106,11 +106,11 @@ var gauge = new LinearGauge({
       minorTicks: 2,
       strokeTicks: true,
       highlights: [
-          {
-              "from": 150,
-              "to": 200,
-              "color": "rgba(200, 50, 50, .75)"
-          }
+      //    {
+        //      "from": 150,
+          //    "to": 200,
+            //  "color": "rgba(200, 50, 50, .75)"
+          //}
       ],
       colorPlate: "#fff",
       borderShadowWidth: 0,
